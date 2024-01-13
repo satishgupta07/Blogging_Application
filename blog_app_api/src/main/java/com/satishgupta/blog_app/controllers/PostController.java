@@ -8,6 +8,7 @@ import com.satishgupta.blog_app.config.AppConstants;
 import com.satishgupta.blog_app.payloads.ApiResponse;
 import com.satishgupta.blog_app.payloads.PostResponse;
 import com.satishgupta.blog_app.services.FileService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/")
+@Tag(name="PostController", description = "APIs for managing posts")
 public class PostController {
 
     @Autowired

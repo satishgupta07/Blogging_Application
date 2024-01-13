@@ -2,6 +2,7 @@ package com.satishgupta.blog_app.controllers;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/categories")
+@Tag(name="CategoryController", description = "APIs for managing categories")
 public class CategoryController {
 
     @Autowired

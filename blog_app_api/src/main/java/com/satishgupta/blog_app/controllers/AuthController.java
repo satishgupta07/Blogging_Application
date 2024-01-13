@@ -5,6 +5,7 @@ import com.satishgupta.blog_app.payloads.JwtAuthResponse;
 import com.satishgupta.blog_app.payloads.UserDto;
 import com.satishgupta.blog_app.security.JwtUtils;
 import com.satishgupta.blog_app.services.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/auth")
 @CrossOrigin("*")
+@Tag(name="AuthController", description = "APIs for Authentication")
 public class AuthController {
 
     @Autowired
